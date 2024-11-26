@@ -1,46 +1,62 @@
-import React from 'react';
-import { Navbar, Nav, Button, Container } from 'react-bootstrap';
+// components/Header.js
+"use client"
+
+import React, { useEffect } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import LOGO from '../../../public/images/logo.png';
+import style from '../../app/globals.css'
 const Header = () => {
+  useEffect(() => {
+    // Ensure Bootstrap's JavaScript is loaded
+    import('bootstrap/dist/js/bootstrap.bundle.min.js');
+  }, []);
+
   return (
-    <Navbar bg="light" expand="lg" className="shadow-sm">
-      <Container>
-        <Navbar.Brand href="/">
+    <nav className="navbar navbar-expand-lg bg-light">
+      <div className="container-fluid">
+        <Link href="/" className="navbar-brand d-flex align-items-center">
           <Image
-            src="/images/logo.png" 
+            src={LOGO}
             alt="Skill Mantra Logo"
-            width="40"
-            height="40"
-            className="d-inline-block align-top"
           />
-          <span className="ms-2 fw-bold" style={{ color: '#222' }}>
-            Skill <span style={{ color: '#00d9c0' }}>Mantra</span>
-          </span>
-        </Navbar.Brand>
+        </Link>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="/" className="mx-2">
-              Home
-            </Nav.Link>
-            <Nav.Link href="/courses" className="mx-2">
-              Courses
-            </Nav.Link>
-            <Nav.Link href="/about" className="mx-2">
-              About Us
-            </Nav.Link>
-          </Nav>
 
-          <div className="d-flex ms-3">
-            <Button variant="outline-primary" className="me-2">
-              Sign In
-            </Button>
-            <Button variant="primary">Log In</Button>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link href="/" className="nav-link active" aria-current="page">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/courses" className="nav-link">
+                Courses
+              </Link>
+            </li>
+          </ul>
+
+          <div className="d-flex gap-2">
+            <button className="btn btn-purple">Sign In</button>
+            <button className="btn btn-purple">Log In</button>
           </div>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        </div>
+      </div>
+    </nav>
   );
 };
 
