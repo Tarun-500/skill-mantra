@@ -12,7 +12,7 @@ const JobAssistance = () => {
       <Container fluid className={`py-5 ${styles.JobAssistance_container}`}>
         <Row className="justify-content-center mx-auto mx-1640">
           <Col md={5}>
-            <Card className={`text-center ${styles.card}`}>
+            <Card className={`text-center h-100 ${styles.card}`}>
               <CardBody>
                 <CardTitle className={styles.title}>
                   Placement Assistance & Process
@@ -25,15 +25,15 @@ const JobAssistance = () => {
                   />
                 </div>
 
-                  <ul className={styles.text}>
-                    <li>Personalized guidance to help you secure your ideal job.</li>
-                    <li>Dedicated support throughout your job search journey.</li>
-                  </ul>
+                <ul className={styles.text}>
+                  <li>Personalized guidance to help you secure your ideal job.</li>
+                  <li>Dedicated support throughout your job search journey.</li>
+                </ul>
               </CardBody>
             </Card>
           </Col>
           <Col md={5}>
-            <Card className={`text-center ${styles.card}`}>
+            <Card className={`text-center h-100 ${styles.card}`}>
               <CardBody>
                 <CardTitle className={styles.title}>
                   CV Prep & Enhancement
@@ -46,11 +46,10 @@ const JobAssistance = () => {
                   />
                 </div>
 
-                
-                  <ul className={styles.text}>
-                    <li>Professional resume crafting to highlight your strengths.</li>
-                    <li>Tailored CV advice to make you stand out to employers.</li>
-                  </ul> 
+                <ul className={styles.text}>
+                  <li>Professional resume crafting to highlight your strengths.</li>
+                  <li>Tailored CV advice to make you stand out to employers.</li>
+                </ul>
               </CardBody>
             </Card>
           </Col>

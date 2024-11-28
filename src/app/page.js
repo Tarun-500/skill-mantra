@@ -11,6 +11,11 @@ import MeterComponent from "./components/Meter";
 import JobAssistance from "./components/JobAssistance";
 import TrustedCompanies from "./components/TrustedCompanies";
 import ProgramPartners from "./components/ProgrammPartner";
+import CCAFeatures from "./components/CCAFeatures";
+import ProgramFeatures from "./components/ProgramFeatures";
+import DreamsComponent from "./components/Dream";
+import StepTimeline from "./components/StepTimeline";
+import AssetSlider from "./components/AssetSlider";
 
 export default function Home() {
   return (
@@ -20,9 +25,14 @@ export default function Home() {
         headingText="Our Tools Platform"
       />
       <MeterComponent />
+      <AssetSlider />
+      <CCAFeatures />
+      <DreamsComponent />
       <ProgramPartners />
+      <ProgramFeatures />
       <TrustedCompanies />
       <JobAssistance />
+      <StepTimeline />
       <FinancePartner />
       <WhoCanJoin />
       <WhoWeAre />

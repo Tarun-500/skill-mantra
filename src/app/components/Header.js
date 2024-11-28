@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LOGO from '../../../public/images/logo.png';
-import style from './components.module.css'; 
+import style from './components.module.css';
 
 const Header = () => {
   useEffect(() => {
@@ -22,7 +22,7 @@ const Header = () => {
               alt="Skill Mantra Logo"
               className={style.logoImg}
             />
-          </Link> 
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -43,15 +43,15 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/courses" className="nav-link">
+                <Link href="/" className="nav-link">
                   Courses
                 </Link>
               </li>
             </ul>
 
             <div className="d-flex gap-2">
-              <button className="btn btn-purple">Sign In</button>
-              <button className="btn btn-purple">Log In</button>
+              <button className="btn btn-purple nav-btn">Sign In</button>
+              <button className="btn btn-purple nav-btn">Log In</button>
             </div>
           </div>
         </div>
