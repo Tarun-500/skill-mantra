@@ -1,0 +1,328 @@
+.financePartnerContainer {
+  background-color: var(--green);
+  padding: 100px;
+
+  & .heading {
+    color: var(--blue);
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: var(--font-nunito);
+    font-size: 70px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  & .description {
+    font-family: var(--font-gilroyMedium);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  & .imgBox {
+    max-width: 524px;
+    max-height: 524px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: var(--white);
+    border-radius: 50%;
+  }
+
+  & .logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 55px;
+  }
+}
+
+/* -----------------  who can join ---------------*/
+
+.whoCanJoinContainer {
+  padding: 100px;
+}
+
+.title {
+  font-family: var(--font-acme);
+  text-align: center;
+  color: var(--blue);
+  margin-bottom: 70px;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.categoriesRow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 12px;
+}
+
+.categoryBox {
+  background-color: var(--blue);
+  color: var(--white);
+  font-family: var(--font-gilroyMedium);
+  font-size: 40px;
+  line-height: 1;
+  font-weight: bold;
+  padding: 40px 50px;
+  flex: 1 1 calc(33.333% - 12px);
+  width: calc(33.333% - 12px);
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryBox:hover {
+  background-color: var(--green);
+  color: var(--blue);
+  transform: translateY(-5px);
+}
+
+.certificateRow {
+  margin-top: 40px;
+}
+
+.subtitle {
+  font-family: var(--font-acme);
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.certificateImage {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ------------ who we are -------------- */
+
+.whoWeAreSection {
+  padding: 100px;
+
+  & .imageCol {
+    text-align: center;
+  }
+
+  & .iconWrapper {
+    display: inline-block;
+    padding: 20px;
+  }
+  & .icon {
+    max-width: 100%;
+    height: auto;
+  }
+  & .description {
+    padding-left: 150px;
+    font-family: var(--font-nunito);
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+}
+
+/* -------- counseling session -------------- */
+
+.counselingSection {
+  padding: 100px 0;
+
+  & .heading {
+    font-family: var(--font-nunito);
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: left;
+    margin-bottom: 120px;
+  }
+
+  & .formContainer {
+    background-color: #21355c;
+    padding: 100px 40px;
+    border-radius: var(--rounded-50);
+    color: #ffffff;
+  }
+
+  & .formHeading {
+    font-family: var(--font-nunito);
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--white);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  & .form {
+    background-color: var(--white);
+    padding: 20px;
+  }
+  & .inputGroup {
+    margin-bottom: 20px;
+  }
+
+  & .inputField {
+    width: 100%;
+    padding: 20px;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: 2px solid var(--blue);
+    font-size: 30px;
+    height: 70px;
+    outline: none;
+  }
+
+  & .inputField:focus {
+    outline: none;
+    border-color: var(--green);
+  }
+}
+
+/* -------- slider ---------- */
+
+.slider_container {
+  padding: 100px;
+  & .slider_card {
+    & .slider_img_box {
+      width: 300px;
+      height: 300px;
+      margin: auto;
+      & .img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+    }
+    & .slider_text {
+      text-align: center;
+      font-family: var(--font-nunito);
+      color: var(--white);
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 1.5;
+      margin-top: 30px;
+    }
+  }
+}
+
+/* -------------- job assistance ------------ */
+
+.JobAssistance_container {
+  padding: 100px;
+
+  & .card {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 40px;
+  }
+
+  & .icon {
+    margin-bottom: 30px;
+  }
+
+  & .image {
+    width: auto;
+    height: 180px;
+  }
+
+  & .title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--white);
+  }
+
+  & .text {
+    text-align: left;
+  }
+
+  & .text ul {
+    list-style: dot;
+    padding: 0;
+  }
+
+  & .text li {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+}
+
+/*  ----------- TrustedCompanies_container ------------- */
+
+.TrustedCompanies_container {
+  padding: 100px;
+  .heading {
+    font-family: var(--font-gilroyBold);
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    text-align: center;
+  }
+
+  .logo {
+    /* min-width: 200px; */
+    max-width: 250px;
+    min-height: 60px;
+    height: auto;
+    margin: auto;
+    object-fit: contain;
+  }
+}
+
+/* ----------- program partner ---------- */
+
+.programPartners_container {
+  text-align: center;
+  padding: 100px;
+
+  & .heading {
+    font-family: var(--font-gilroyBold);
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 80px;
+    color: var(--blue);
+  }
+
+  & .sliderContainer {
+    margin-top: 20px;
+  }
+
+  & .slider {
+    margin: 0 auto;
+  }
+
+  & .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  & .slide img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+  }
+}
