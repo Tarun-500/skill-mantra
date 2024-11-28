@@ -1,0 +1,37 @@
+.header {
+  & .logo img {
+    width: 450px;
+    height: auto;
+  }
+}
+
+
+/* ------------ */
+.toolsPlatform {
+  text-align: center;
+  margin: 50px 0;
+  padding: 50px 0;
+  position: relative;
+}
+
+.brandLogos {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.logoContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.logoImage:hover {
+  transform: scale(1.1);
+}
