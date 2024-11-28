@@ -8,7 +8,7 @@ import Img1 from "../../../public/images/job_assistance_1.png"
 import Img2 from "../../../public/images/job_assistance_2.png"
 const JobAssistance = () => {
   return (
-    <section className='bg-yellow'>
+    <section className='bg-yellow section-padding'>
       <Container fluid className={`py-5 ${styles.JobAssistance_container}`}>
         <Row className="justify-content-center mx-auto mx-1640">
           <Col md={5}>

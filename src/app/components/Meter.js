@@ -29,7 +29,7 @@ const MeterComponent = () => {
   }, []);
 
   return (
-    <Container fluid className="mx-1640 mx-auto">
+    <Container fluid className="mx-1640 mx-auto section-padding">
       <div className="meterBox">
         {stats.map((stat, index) => (
           <div

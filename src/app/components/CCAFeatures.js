@@ -68,8 +68,8 @@ const CCAFeatures = () => {
     ];
     const bgColors = ["bg-yellow", "bg-purple", "bg-green"];
     return (
-        <div className={styles.ccaFeautures_container}>
-            <h2 className={styles.heading}>Why Certified Corporate Accountant (CCA)?</h2>
+        <div className={`section-padding ${styles.ccaFeatures_container}`}>
+            <h2 className={"head-1 text-blue text-center"}>Why Certified Corporate Accountant (CCA)?</h2>
             <Container fluid ref={containerRef}>
                 <Row className="mx-1640 mx-auto">
                     {features.map((feature, index) => (

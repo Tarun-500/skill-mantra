@@ -33,7 +33,7 @@ const CounselingForm = () => {
     };
 
     return (
-        <div className={styles.counselingSection}>
+        <div className={`section-padding ${styles.counselingSection}`}>
             <Container fluid>
                 <Row className="mx-auto align-items-center mx-1640">
                     <Col md={6}>

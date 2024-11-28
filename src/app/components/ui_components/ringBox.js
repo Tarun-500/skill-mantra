@@ -5,27 +5,28 @@ import styles from "./ui.module.css"; // For custom styles
 
 const RingComponent = ({ position = {}, outerRingColor = "#FF5733", innerRingColor = "#33FF57" }) => {
     return (
-        <div
-            className={styles.ringContainer}
-            style={{
-                position: "absolute",
-                ...position,
-            }}
-        >
-
+        <div style={{
+            position: "absolute",
+            ...position,
+        }}>
             <div
-                className={styles.outerRing}
-                style={{
-                    borderColor: outerRingColor,
-                }}
+                className={styles.ringContainer}
             >
 
                 <div
-                    className={styles.innerRing}
+                    className={styles.outerRing}
                     style={{
-                        borderColor: innerRingColor,
+                        borderColor: outerRingColor,
                     }}
-                ></div>
+                >
+
+                    <div
+                        className={styles.innerRing}
+                        style={{
+                            borderColor: innerRingColor,
+                        }}
+                    ></div>
+                </div>
             </div>
         </div>
     );

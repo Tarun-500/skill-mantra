@@ -56,8 +56,8 @@ const ProgramPartners = () => {
     ];
 
     return (
-        <section className={styles.programPartners_container}>
-            <h2 className={styles.heading}>Program Partners</h2>
+        <section className={`section-padding ${styles.programPartners_container}`}>
+            <h2 className={"head-1 text-blue text-center"}>Program Partners</h2>
             <div className={styles.sliderContainer}>
                 <Slider {...leftToRightSettings} className={styles.slider}>
                     {logos.map((logo, index) => (

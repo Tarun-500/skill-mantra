@@ -6,6 +6,7 @@ import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LOGO from '../../../public/images/logo.png';
 import style from './components.module.css';
+import { PiListBold } from "react-icons/pi";
 
 const Header = () => {
   useEffect(() => {
@@ -14,7 +15,7 @@ const Header = () => {
 
   return (
     <header className={style.header}>
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-md">
         <div className="container-fluid">
           <Link href="/" className={`${style.logo} navbar-brand d-flex align-items-center`}>
             <Image
@@ -23,8 +24,10 @@ const Header = () => {
               className={style.logoImg}
             />
           </Link>
+ 
+
           <button
-            className="navbar-toggler"
+            className="navbar-toggler border-0"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -32,7 +35,7 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <PiListBold />
           </button>
 
           <div className="collapse navbar-collapse" id="navbarNav">
@@ -47,12 +50,13 @@ const Header = () => {
                   Courses
                 </Link>
               </li>
+              <li className="nav-item">
+                <button className="btn btn-purple nav-btn">Sign In</button>
+              </li>
+              <li className="nav-item">
+                <button className="btn btn-purple nav-btn">Log In</button>
+              </li>
             </ul>
-
-            <div className="d-flex gap-2">
-              <button className="btn btn-purple nav-btn">Sign In</button>
-              <button className="btn btn-purple nav-btn">Log In</button>
-            </div>
           </div>
         </div>
       </nav>

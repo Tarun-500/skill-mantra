@@ -27,7 +27,7 @@ const DreamsComponent = () => {
                 duration: 1,
                 stagger: 0.2,
                 scrollTrigger: {
-                    trigger: ".dreams-container",
+                    trigger: ".dreams_container",
                     start: "top bottom",
                     end: "bottom top",
                     scrub: 1,
@@ -60,8 +60,8 @@ const DreamsComponent = () => {
     ];
 
     return (
-        <div className="dreams-container text-center">
-            <h2 className={styles.heading}>A Mantra For Your Dreams</h2>
+        <section className={`section-padding text-center ${styles.dreams_container}`}>
+            <h2 className={"head-1 text-blue text-center"}>A Mantra For Your Dreams</h2>
             <Container>
                 <Row className="mx-1640 mx-auto justify-content-center">
                     {stats.map((stat, index) => (
@@ -87,7 +87,7 @@ const DreamsComponent = () => {
                     ))}
                 </Row>
             </Container>
-        </div>
+        </section>
     );
 };
 

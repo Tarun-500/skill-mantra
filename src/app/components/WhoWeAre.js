@@ -8,7 +8,7 @@ import teamIcon from "../../../public/images/who-we-are.png";
 
 const WhoWeAre = () => {
   return (
-    <section className={`bg-yellow  ${styles.whoWeAreSection}`}>
+    <section className={`bg-yellow section-padding  ${styles.whoWeAreSection}`}>
       <Container fluid>
         <Row className="align-items-center mx-1640">
           {/* Left Side: Icon and Heading */}

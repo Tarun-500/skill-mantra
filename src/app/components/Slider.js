@@ -33,7 +33,7 @@ const CourseSlider = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2000,
 
         responsive: [
             {
@@ -49,7 +49,7 @@ const CourseSlider = () => {
                 },
             },
             {
-                breakpoint: 480,
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                 },
@@ -58,7 +58,7 @@ const CourseSlider = () => {
     };
 
     return (
-        <section className="bg-blue">
+        <section className="bg-blue section-padding">
             <Container fluid className={styles.slider_container}>
             <Slider {...settings}>
                 {courses.map((course, index) => (

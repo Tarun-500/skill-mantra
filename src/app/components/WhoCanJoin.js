@@ -17,11 +17,9 @@ const WhoCanJoin = () => {
     ];
 
     return (
-        <Container fluid className={`${styles.whoCanJoinContainer}`}>
+        <Container fluid className={`section-padding ${styles.whoCanJoinContainer}`}>
 
-            <h2 className={styles.title}>Who Can Join Certified Corporate Accounting</h2>
-
-
+            <h2 className={"head-1 text-blue text-center"}>Who Can Join Certified Corporate Accounting</h2>
             <div className={`${styles.categoriesRow}`}>
                 {categories.map((category, index) => (
                     <div className={styles.categoryBox} key={index}>
@@ -29,7 +27,6 @@ const WhoCanJoin = () => {
                     </div>
                 ))}
             </div>
-
 
             <Row className={`align-items-center ${styles.certificateRow}`}>
                 <Col md={6}>

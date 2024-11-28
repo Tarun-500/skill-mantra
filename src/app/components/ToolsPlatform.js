@@ -12,6 +12,7 @@ import Img33 from "../../../public/images/tally-color.png";
 import Img4 from "../../../public/images/cloud.png";
 import Img44 from "../../../public/images/cloud-color.png";
 import DotBox from "./ui_components/dotBox";
+import { Container } from "react-bootstrap";
 
 const logos = [
     {
@@ -41,56 +42,58 @@ const dotPosition = {
 
 const ToolsPlatform = ({ headingText = "Our Tools Platform" }) => {
     return (
-        <div className={`${styles.toolsPlatform} bg-purple`}>
-            <h2>{headingText}</h2>
-            <div className={`mx-1640 mx-auto ${styles.brandLogos}`}>
-                {logos.map((logo, index) => (
-                    <div
-                        key={index}
-                        className={styles.logoContainer}
-                        style={{ position: "relative" }}
-                        onMouseOver={(e) => {
-                            e.currentTarget.querySelector(".bw-image").style.opacity = 0;
-                            e.currentTarget.querySelector(".color-image").style.opacity = 1;
-                        }}
-                        onMouseOut={(e) => {
-                            e.currentTarget.querySelector(".bw-image").style.opacity = 1;
-                            e.currentTarget.querySelector(".color-image").style.opacity = 0;
-                        }}
-                    >
-                        <Image
-                            className={`${styles.logoImage} bw-image`}
-                            src={logo.blackAndWhite}
-                            alt={`logo-${index}-bw`}
-                            style={{
-                                display: "inline",
-                                position: "absolute",
-                                top: 0,
-                                left: 0,
-                                transition: "opacity 0.3s ease-in-out",
+        <section className={`section-padding ${styles.toolsPlatform} bg-purple`}>
+            <Container fluid>
+                <h2 className="head-1 text-blue text-center">{headingText}</h2>
+                <div className={`mx-1640 mx-auto ${styles.brandLogos}`}>
+                    {logos.map((logo, index) => (
+                        <div
+                            key={index}
+                            className={styles.logoContainer}
+                            style={{ position: "relative" }}
+                            onMouseOver={(e) => {
+                                e.currentTarget.querySelector(".bw-image").style.opacity = 0;
+                                e.currentTarget.querySelector(".color-image").style.opacity = 1;
                             }}
-                        />
-
-                        <Image
-                            className={`${styles.logoImage} color-image`}
-                            src={logo.color}
-                            alt={`logo-${index}-color`}
-                            style={{
-                                display: "inline",
-                                position: "absolute",
-                                top: 0,
-                                left: 0,
-                                opacity: 0,
-                                transition: "opacity 0.3s ease-in-out",
+                            onMouseOut={(e) => {
+                                e.currentTarget.querySelector(".bw-image").style.opacity = 1;
+                                e.currentTarget.querySelector(".color-image").style.opacity = 0;
                             }}
-                        />
+                        >
+                            <Image
+                                className={`${styles.logoImage} bw-image`}
+                                src={logo.blackAndWhite}
+                                alt={`logo-${index}-bw`}
+                                style={{
+                                    display: "inline",
+                                    position: "absolute",
+                                    top: 0,
+                                    left: 0,
+                                    transition: "opacity 0.3s ease-in-out",
+                                }}
+                            />
+
+                            <Image
+                                className={`${styles.logoImage} color-image`}
+                                src={logo.color}
+                                alt={`logo-${index}-color`}
+                                style={{
+                                    display: "inline",
+                                    position: "absolute",
+                                    top: 0,
+                                    left: 0,
+                                    opacity: 0,
+                                    transition: "opacity 0.3s ease-in-out",
+                                }}
+                            />
 
 
-                    </div>
-                ))}
-            </div>
-            <DotBox defaultColor={"red"} position={dotPosition} />
-        </div>
+                        </div>
+                    ))}
+                </div>
+                <DotBox defaultColor={"red"} position={dotPosition} />
+            </Container>
+        </section>
     );
 };
 

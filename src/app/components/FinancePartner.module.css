@@ -1,29 +1,11 @@
 .financePartnerContainer {
   background-color: var(--green);
-  padding: 100px;
-
-  & .heading {
-    color: var(--blue);
-    font-weight: 600;
-    margin-bottom: 20px;
-    font-family: var(--font-nunito);
-    font-size: 70px;
-    line-height: 1.5;
-    text-align: center;
-  }
-
-  & .description {
-    font-family: var(--font-gilroyMedium);
-    color: var(--blue);
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1.2;
-  }
 
   & .imgBox {
     max-width: 524px;
     max-height: 524px;
     width: 100%;
+    margin: auto;
     height: 100%;
     aspect-ratio: 1;
     background-color: var(--white);
@@ -41,76 +23,63 @@
 /* -----------------  who can join ---------------*/
 
 .whoCanJoinContainer {
-  padding: 100px;
-}
+  
+  & .categoriesRow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 12px;
+  }
 
-.title {
-  font-family: var(--font-acme);
-  text-align: center;
-  color: var(--blue);
-  margin-bottom: 70px;
-  font-size: 70px;
-  font-weight: 400;
-  line-height: 1.5;
-}
+  & .categoryBox {
+    background-color: var(--blue);
+    color: var(--white);
+    font-family: var(--font-gilroyMedium);
+    font-size: 40px;
+    line-height: 1;
+    font-weight: bold;
+    padding: 40px;
+    flex: 1 1 calc(33.333% - 12px);
+    width: calc(33.333% - 12px);
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.categoriesRow {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  row-gap: 20px;
-  column-gap: 12px;
-}
+  & .categoryBox:hover {
+    background-color: var(--green);
+    color: var(--blue);
+    transform: translateY(-5px);
+  }
 
-.categoryBox {
-  background-color: var(--blue);
-  color: var(--white);
-  font-family: var(--font-gilroyMedium);
-  font-size: 40px;
-  line-height: 1;
-  font-weight: bold;
-  padding: 40px;
-  flex: 1 1 calc(33.333% - 12px);
-  width: calc(33.333% - 12px);
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  & .certificateRow {
+    margin-top: 40px;
+  }
 
-.categoryBox:hover {
-  background-color: var(--green);
-  color: var(--blue);
-  transform: translateY(-5px);
-}
+  & .subtitle {
+    font-family: var(--font-acme);
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+  }
 
-.certificateRow {
-  margin-top: 40px;
-}
-
-.subtitle {
-  font-family: var(--font-acme);
-  font-size: 70px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.certificateImage {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
+  & .certificateImage {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 /* ------------ who we are -------------- */
 
 .whoWeAreSection {
-  padding: 100px;
-
   & .imageCol {
     text-align: center;
   }
@@ -137,8 +106,6 @@
 /* -------- counseling session -------------- */
 
 .counselingSection {
-  padding: 100px 0;
-
   & .heading {
     font-family: var(--font-nunito);
     color: var(--blue);
@@ -196,13 +163,11 @@
 /* -------- slider ---------- */
 
 .slider_container {
-  padding: 100px;
-
   & .slider_card {
     & .slider_img_box {
       width: 300px;
       height: 300px;
-      margin: auto;
+      margin: auto !important;
 
       & .img {
         width: 100%;
@@ -227,8 +192,6 @@
 /* -------------- job assistance ------------ */
 
 .JobAssistance_container {
-  padding: 100px;
-
   & .card {
     background-color: var(--blue);
     color: var(--white);
@@ -269,18 +232,7 @@
 
 /*  ----------- TrustedCompanies_container ------------- */
 
-.TrustedCompanies_container {
-  padding: 100px;
-
-  .heading {
-    font-family: var(--font-gilroyBold);
-    font-size: 70px;
-    font-weight: bold;
-    line-height: 1.5;
-    text-align: center;
-    margin-bottom: 100px;
-    color: var(--blue);
-  }
+.TrustedCompanies_container { 
 
   .slide {
     display: flex;
@@ -306,17 +258,6 @@
 
 .programPartners_container {
   text-align: center;
-  padding: 100px;
-
-  & .heading {
-    font-family: var(--font-gilroyBold);
-    font-size: 70px;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    margin-bottom: 80px;
-    color: var(--blue);
-  }
 
   & .sliderContainer {
     margin-top: 20px;

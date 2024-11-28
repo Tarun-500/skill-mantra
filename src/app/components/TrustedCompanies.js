@@ -47,8 +47,8 @@ const TrustedCompanies = () => {
     };
 
     return (
-        <section className={`${styles.TrustedCompanies_container}`}>
-            <h2 className={styles.heading}>Trusted by 200+ Companies Worldwide</h2>
+        <section className={`section-padding ${styles.TrustedCompanies_container}`}>
+            <h2 className={"head-1 text-blue text-center"}>Trusted by 200+ Companies Worldwide</h2>
             <Slider {...settings} className={`bg-blue mx-auto mx-1680 p-4 ${styles.slider}`}>
                 <div className={styles.slide}>
                     <Image src={Img1} alt="Company 1" className={styles.logo} />
