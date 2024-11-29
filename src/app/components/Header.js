@@ -27,7 +27,7 @@ const Header = () => {
  
 
           <button
-            className="navbar-toggler border-0"
+            className="navbar-toggler border-0 p-0"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"

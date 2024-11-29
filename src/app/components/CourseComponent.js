@@ -19,11 +19,11 @@ const CourseComponent = () => {
       <Row className="mx-1640 mx-auto justify-content-center">
       <h1 className={styles.title}>Certified Corporate Accounting</h1>
         
-        <Col md={6} className="text-center mb-4">
+        <Col md={6} className="text-center text-md-start mb-4">
           <p className={styles.description}>
            {" Skill Mantra's CCA course offers advanced skills in corporate accounting and auditing. This industry-oriented program prepares you for real-world challenges, enhancing your decision-making and unlocking lucrative career opportunities."}
           </p>
-          <div className="d-flex justify-content-center gap-4">
+          <div className="d-flex justify-content-center justify-content-md-start  gap-4">
             <div className={styles.infoBox}>
               <span className={styles.infoTitle}>Duration</span>
               <span>9 Months</span>
