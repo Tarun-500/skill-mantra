@@ -43,6 +43,16 @@ section {
   overflow-x: hidden;
 }
 
+
+.mx-695{
+  max-width: 695px;
+}
+
+
+.mx-750{
+  max-width: 750px;
+}
+
 .mx-1640 {
   max-width: 1640px;
   margin: auto;
@@ -153,6 +163,7 @@ header {
 
   & .navbar-toggler svg {
     width: 40px !important;
+    font-size: 40px !important;
   }
 }
 

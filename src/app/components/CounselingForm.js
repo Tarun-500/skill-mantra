@@ -53,7 +53,7 @@ const CounselingForm = () => {
             <Container fluid>
                 <Row className="mx-auto align-items-center mx-1640">
                     <Col md={6} className="position-relative">
-                        <h2 className={styles.heading}>
+                        <h2 className={"head-1 text-blue mx-750 text-center text-md-start"}>
                             Want to take a customised counselling before enrolling?
                         </h2>
                         <button className={"btn btn-blue"}>Book Now</button>
@@ -61,7 +61,7 @@ const CounselingForm = () => {
                     </Col>
 
                     <Col md={6}>
-                        <div className={styles.formContainer}>
+                        <div className={`bg-blue ${styles.formContainer}`}>
                             <h3 className={styles.formHeading}>Enroll for Free Counseling</h3>
                             <Formik
                                 initialValues={initialValues}

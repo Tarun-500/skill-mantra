@@ -24,12 +24,12 @@ const CCAFeatures = () => {
 
         gsap.fromTo(
             elements,
-            { opacity: 0, y: "-100%" },
+            { opacity: 0, y: "100%" },
             {
                 opacity: 1,
                 y: 0,
                 stagger: 0.2,
-                duration: 1,
+                duration: .3,
                 scrollTrigger: {
                     trigger: containerRef.current,
                     start: "top 80%",
@@ -41,15 +41,15 @@ const CCAFeatures = () => {
 
         gsap.fromTo(
             elements,
-            { opacity: 0, y: "-100%" },
+            { opacity: 0, y: "100%" },
             {
                 opacity: 1,
                 y: 0,
                 stagger: .1,
-                duration: 1,
+                duration: .3,
                 scrollTrigger: {
                     trigger: containerRef.current,
-                    start: "top 80%",
+                    start: "top 100%",
                     end: "bottom 20%",
                     scrub: true,
                 },
@@ -73,10 +73,10 @@ const CCAFeatures = () => {
             <Container fluid ref={containerRef}>
                 <Row className="mx-1640 mx-auto">
                     {features.map((feature, index) => (
-                        <Col key={index} xs={12} md={6} lg={3} className={styles.featureCol}>
+                        <Col key={index} xs={6} sm={4} md={4} lg={3} className={styles.featureCol}>
                             <div className={styles.feature}>
                                 <Image src={feature.icon} alt={feature.text} className={styles.icon} />
-                                <p className={styles.text}>{feature.text}</p>
+                                <p className={"para-1"}>{feature.text}</p>
                             </div>
                         </Col>
                     ))}
