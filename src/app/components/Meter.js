@@ -29,7 +29,8 @@ const MeterComponent = () => {
   }, []);
 
   return (
-    <Container fluid className="mx-1640 mx-auto section-padding">
+   <section>
+      <Container fluid className="mx-1640 mx-auto section-padding">
       <div className="meterBox">
         {stats.map((stat, index) => (
           <div
@@ -51,7 +52,7 @@ const MeterComponent = () => {
               className="needle"
               ref={(el) => (needleRefs.current[index] = el)}
             >
-              <svg width="100" height="100" viewBox="0 0 100 100">
+              <svg viewBox="0 0 100 100">
                 <path
                   d="M50 95 L45 45 Q50 5, 55 45 Z"
                   fill="#00d9d9"
@@ -64,6 +65,7 @@ const MeterComponent = () => {
         ))}
       </div>
     </Container>
+   </section>
   );
 };
 

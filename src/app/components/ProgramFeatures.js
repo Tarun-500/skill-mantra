@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import styles from "./components.module.css";  
+import styles from "./components.module.css";
 import Image from "next/image";
 
 import Img1 from "../../../public/images/cca-1.png"
@@ -13,7 +13,7 @@ import Img3 from "../../../public/images/cca-3.png"
 import Img4 from "../../../public/images/cca-4.png"
 import Img5 from "../../../public/images/cca-5.png"
 import Img6 from "../../../public/images/cca-6.png"
-import Img7 from "../../../public/images/cca-7.png" 
+import Img7 from "../../../public/images/cca-7.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -57,7 +57,7 @@ const ProgramFeatures = () => {
             title: "Overall Approach",
             description: "Prepare to make your mark in accounting with a course designed to equip you for success.",
         },
-        
+
     ];
 
     useEffect(() => {
@@ -97,9 +97,8 @@ const ProgramFeatures = () => {
     const bgColors = ["bg-yellow", "bg-purple", "bg-green"];
 
     return (
-        <div className={`mx-1680 mx-auto overflow-hidden section-padding ${styles.programFeatures_container}`} ref={containerRef}>
+        <section className={`mx-1680 mx-auto overflow-hidden section-padding ${styles.programFeatures_container}`} ref={containerRef}>
             <Container fluid>
-
                 <div className={`${styles.horizontalScrollSection}`} ref={scrollSectionRef}>
                     <Row className={styles.featureRow}>
                         {features.map((feature, index) => (
@@ -114,7 +113,7 @@ const ProgramFeatures = () => {
                     </Row>
                 </div>
             </Container>
-        </div>
+        </section>
     );
 };
 

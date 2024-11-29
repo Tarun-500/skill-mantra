@@ -347,9 +347,7 @@
 
 /* ---------- testimonial ----------- */
 
-.testimonialSection {
-  background-color: #0a1d41; /* Blue background */
-  padding: 50px 0;
+.testimonialSection { 
 
   & .slider .slick-slide {
     display: flex;

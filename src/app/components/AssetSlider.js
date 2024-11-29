@@ -56,7 +56,7 @@ const AssetsSliders = () => {
         autoplaySpeed: 3000,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
                 },
@@ -77,7 +77,7 @@ const AssetsSliders = () => {
     };
 
     return (
-        <section className="bg-blue">
+        <section className="section-padding bg-blue">
             <Container fluid className={styles.asset_slider_container}>
                 <Slider {...settings}>
                     {sections.map((course, index) => (

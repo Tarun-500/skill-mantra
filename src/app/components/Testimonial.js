@@ -3,6 +3,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import styles from './components.module.css';
+import { Container } from 'react-bootstrap';
 
 const testimonials = [
   { name: "Amit Kumar", review: "Company is fully committed to enhancing skills of youth of India...", stars: 5 },
@@ -39,22 +40,24 @@ const TestimonialComponent = () => {
   };
 
   return (
-    <div className={`section-padding ${styles.testimonialSection}`}>
-      <h2 className="head-1 text-center text-white">Testimonials</h2>
-      <Slider {...settings} className={styles.slider}>
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className={`card ${styles.testimonialCard}`}>
-            <div className="card-body">
-              <div className="text-center">
-                {"★".repeat(testimonial.stars).padEnd(5, "☆")}
+    <section className='section-padding bg-blue'>
+      <Container fluid className={`mx-1640 mx-auto ${styles.testimonialSection}`}>
+        <h2 className="head-1 text-center text-white">Testimonials</h2>
+        <Slider {...settings} className={styles.slider}>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className={`card ${styles.testimonialCard}`}>
+              <div className="card-body">
+                <div className="text-center">
+                  {"★".repeat(testimonial.stars).padEnd(5, "☆")}
+                </div>
+                <p className={`mt-3 ${styles.reviewText}`}>{testimonial.review}</p>
+                <h5 className="text-center mt-3">{testimonial.name}</h5>
               </div>
-              <p className={`mt-3 ${styles.reviewText}`}>{testimonial.review}</p>
-              <h5 className="text-center mt-3">{testimonial.name}</h5>
             </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
+          ))}
+        </Slider>
+      </Container>
+    </section>
   );
 };
 

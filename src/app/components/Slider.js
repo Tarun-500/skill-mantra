@@ -37,7 +37,7 @@ const CourseSlider = () => {
 
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
                 },
@@ -60,22 +60,22 @@ const CourseSlider = () => {
     return (
         <section className="bg-blue section-padding">
             <Container fluid className={styles.slider_container}>
-            <Slider {...settings}>
-                {courses.map((course, index) => (
-                    <div key={index} className={styles.slider_card}>
-                        <div className={styles.slider_img_box}>
-                            <Image
-                                src={course.img}
-                                alt={course.title}
-                                className={styles.img}
-                            />
+                <Slider {...settings}>
+                    {courses.map((course, index) => (
+                        <div key={index} className={styles.slider_card}>
+                            <div className={styles.slider_img_box}>
+                                <Image
+                                    src={course.img}
+                                    alt={course.title}
+                                    className={styles.img}
+                                />
+                            </div>
+                            <p className={styles.slider_text}>{course.title}</p>
                         </div>
-                        <p className={styles.slider_text}>{course.title}</p>
-                    </div>
-                ))}
-            </Slider>
+                    ))}
+                </Slider>
 
-        </Container>
+            </Container>
         </section>
     );
 };

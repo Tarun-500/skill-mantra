@@ -40,8 +40,7 @@ const TargetSegmentCarousel = () => {
   };
 
   return (
-    <section className="">
-
+    <section className="section-padding">
     <div className={styles.target_segment_container}>
       <h2 className={"head-1 text-blue text-center"}>Target Segment Definition</h2>
       <Slider {...settings}>

@@ -25,8 +25,22 @@ const ProgramPartners = () => {
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
+        infinity:true,
         autoplaySpeed: 0,
         cssEase: "linear",
+        responsive: [{
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 5,
+            },
+        },
+        {
+            breakpoint: 400,
+            settings: {
+                slidesToShow: 3,
+            },
+        },]
+
     };
 
     const rightToLeftSettings = {
@@ -34,11 +48,24 @@ const ProgramPartners = () => {
         infinite: true,
         speed: 3000,
         slidesToShow: 5,
+        infinity:true,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
         cssEase: "linear",
         rtl: true,
+        responsive: [{
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 5,
+            },
+        },
+        {
+            breakpoint: 400,
+            settings: {
+                slidesToShow: 3,
+            },
+        },]
     };
 
     const logos = [
@@ -56,7 +83,7 @@ const ProgramPartners = () => {
     ];
 
     return (
-        <section className={`section-padding ${styles.programPartners_container}`}>
+        <section className={`section-padding px-0 ${styles.programPartners_container}`}>
             <h2 className={"head-1 text-blue text-center"}>Program Partners</h2>
             <div className={styles.sliderContainer}>
                 <Slider {...leftToRightSettings} className={styles.slider}>

@@ -5,6 +5,8 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import styles from "./FinancePartner.module.css";
+import TriangleBox from "./ui_components/tringleBox";
+import DotBox from "./ui_components/dotBox";
 
 const CounselingForm = () => {
     // Validation Schema
@@ -32,16 +34,30 @@ const CounselingForm = () => {
         alert(`Form Submitted: ${JSON.stringify(values, null, 2)}`);
     };
 
+    const position = {
+        "position": "absolute",
+        "top": "50%",
+        "right": "50%",
+        "transform": "translate(-50%, -50%)"
+    }
+    const dotPosition = {
+        "position": "absolute",
+        "top": "100%",
+        "right": "0%",
+        "transform": "translate(-50%, -50%)"
+    }
+
     return (
-        <div className={`section-padding ${styles.counselingSection}`}>
+        <section className={`section-padding ${styles.counselingSection}`}>
+            <TriangleBox colors="#FFC224" position={position} />
             <Container fluid>
                 <Row className="mx-auto align-items-center mx-1640">
-                    <Col md={6}>
+                    <Col md={6} className="position-relative">
                         <h2 className={styles.heading}>
                             Want to take a customised counselling before enrolling?
                         </h2>
-                        <button
-                            className={"btn btn-blue"}>Book Now</button>
+                        <button className={"btn btn-blue"}>Book Now</button>
+                        <DotBox rows={5} columns={10} defaultColor="#AABDE1" position={dotPosition} />
                     </Col>
 
                     <Col md={6}>
@@ -108,7 +124,7 @@ const CounselingForm = () => {
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </section>
     );
 };
 

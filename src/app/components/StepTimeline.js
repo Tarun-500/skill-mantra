@@ -2,6 +2,7 @@
 
 import React from "react";
 import styles from "./components.module.css";
+import { Container } from "react-bootstrap";
 
 const steps = [
     {
@@ -23,27 +24,29 @@ const steps = [
 
 const StepTimeline = () => {
     return (
-        <div className={styles.timelineContainer}>
-            {steps.map((item, index) => (
-                <div className={styles.stepContainer} key={index}>
-                    <div className={styles.line}></div>
-                    <div className={styles.stepCircle} style={{ backgroundColor: item.color }}>
-                        <span className={styles.stepText}>{item.step}</span>
+        <section className="section-padding">
+            <Container fluid className={`mx-1640 mx-auto ${styles.timelineContainer}`}>
+                {steps.map((item, index) => (
+                    <div className={styles.stepContainer} key={index}>
+                        <div className={styles.line}></div>
+                        <div className={styles.stepCircle} style={{ backgroundColor: item.color }}>
+                            <span className={styles.stepText}>{item.step}</span>
+                        </div>
+                        <div className={styles.connector} style={{ borderColor: item.color }}>
+                            <svg viewBox="0 0 100 100" className={styles.curve}>
+                                <path
+                                    d={`M ${index === 1 ? "50" : "100"},100 Q 50,50 ${index === 1 ? "50" : "0"},0`}
+                                    fill="none"
+                                    stroke={item.color}
+                                    strokeWidth="3"
+                                />
+                            </svg>
+                        </div>
+                        <p className={styles.stepDescription}>{item.text}</p>
                     </div>
-                    <div className={styles.connector} style={{ borderColor: item.color }}>
-                        <svg viewBox="0 0 100 100" className={styles.curve}>
-                            <path
-                                d={`M ${index === 1 ? "50" : "100"},100 Q 50,50 ${index === 1 ? "50" : "0"},0`}
-                                fill="none"
-                                stroke={item.color}
-                                strokeWidth="3"
-                            />
-                        </svg>
-                    </div>
-                    <p className={styles.stepDescription}>{item.text}</p>
-                </div>
-            ))}
-        </div>
+                ))}
+            </Container>
+        </section>
     );
 };
 
