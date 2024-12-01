@@ -16,6 +16,7 @@ import Accenture from "../../../public/images/program-partner-8.png";
 import Mindtree from "../../../public/images/program-partner-10.png";
 import Xerox from "../../../public/images/program-partner-11.png";
 import Pepsico from "../../../public/images/program-partner-9.png";
+import TriangleBox from "./ui_components/tringleBox";
 
 const ProgramPartners = () => {
     const leftToRightSettings = {
@@ -25,7 +26,7 @@ const ProgramPartners = () => {
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
-        infinity:true,
+        infinity: true,
         autoplaySpeed: 0,
         cssEase: "linear",
         responsive: [{
@@ -48,7 +49,7 @@ const ProgramPartners = () => {
         infinite: true,
         speed: 3000,
         slidesToShow: 5,
-        infinity:true,
+        infinity: true,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
@@ -82,8 +83,17 @@ const ProgramPartners = () => {
         { src: Pepsico, alt: "Pepsico" },
     ];
 
+    const position = {
+        top: "5%",
+        right: "10%",
+        transform: "translate(50%, -50%)",
+        position: "absolute",
+        zIndex: -1,
+    }
+
     return (
-        <section className={`section-padding px-0 ${styles.programPartners_container}`}>
+        <section className={`section-padding ${styles.programPartners_container}`}>
+            <TriangleBox colors="#00E0D3" position={position} />
             <h2 className={"head-1 text-blue text-center"}>Program Partners</h2>
             <div className={styles.sliderContainer}>
                 <Slider {...leftToRightSettings} className={styles.slider}>

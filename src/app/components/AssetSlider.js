@@ -9,7 +9,7 @@ import SliderImg2 from "../../../public/images/growth-slider-2.png";
 import SliderImg3 from "../../../public/images/growth-slider-3.png";
 import SliderImg4 from "../../../public/images/growth-slider-4.png";
 import SliderImg5 from "../../../public/images/growth-slider-5.png";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 const sections = [
     {
@@ -50,47 +50,82 @@ const AssetsSliders = () => {
         infinite: true,
         arrows: false,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 2,
         slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '80px',
         autoplay: true,
         autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
+                    centerPadding: '40px',
+
+                },
+            },
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '180px',
+                },
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '120px',
                 },
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
+                    centerPadding: '40px',
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '0px',
                 },
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
+                    centerPadding: '0px',
                 },
             },
         ],
     };
 
+    const bgColors = ["bg-purple", "bg-green", "bg-yellow"];
     return (
-        <section className="section-padding bg-blue">
-            <Container fluid className={styles.asset_slider_container}>
-                <Slider {...settings}>
+        <section className="section-padding bg-purple-light">
+            <Container fluid className={`mx-1640 mx-auto px-0 ${styles.asset_slider_container}`}>
+                <Slider {...settings} className={styles.slider}>
                     {sections.map((course, index) => (
-                        <div key={index} className={styles.slider_card}>
-                            <div className={styles.slider_img_box}>
-                                <Image
-                                    src={course.img}
-                                    alt={course.title}
-                                    className={styles.img}
-                                    width={100}
-                                />
-                            </div>
-                            <p className={styles.slider_text}>{course.title}</p>
+                        <div key={index} className={`${styles.slider_card} ${bgColors[index % bgColors.length]}`} >
+                            <Row className="mx-0">
+                                <Col xs={8} className="p-0">
+                                    <p className={styles.slider_head}>{course.title}</p>
+                                    <p className={styles.slider_text}>{course.content}</p>
+                                </Col>
+                                <Col xs={4} className="p-0">
+                                    <div className={styles.slider_img_box}>
+                                        <Image
+                                            src={course.img}
+                                            alt={course.title}
+                                            className={styles.img}
+                                        />
+                                    </div>
+                                </Col>
+                            </Row>
+
                         </div>
                     ))}
                 </Slider>

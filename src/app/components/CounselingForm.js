@@ -7,6 +7,7 @@ import * as Yup from "yup";
 import styles from "./FinancePartner.module.css";
 import TriangleBox from "./ui_components/tringleBox";
 import DotBox from "./ui_components/dotBox";
+import RingComponent from "./ui_components/ringBox";
 
 const CounselingForm = () => {
     // Validation Schema
@@ -44,19 +45,28 @@ const CounselingForm = () => {
         "position": "absolute",
         "top": "100%",
         "right": "0%",
-        "transform": "translate(-50%, -50%)"
+        "transform": "translate(-50%, -50%)",
+        "zIndex": "-1"
+    }
+    const positionRing = {
+        "position": "absolute",
+        "top": "50%",
+        "right": "0%",
+        "transform": "translate(50%, -50%)",
+        "zIndex": "0"
     }
 
     return (
         <section className={`section-padding ${styles.counselingSection}`}>
             <TriangleBox colors="#FFC224" position={position} />
-            <Container fluid>
-                <Row className="mx-auto align-items-center mx-1640">
-                    <Col md={6} className="position-relative">
+            <RingComponent position={positionRing} outerRingColor={"#00E0D340"}  innerRingColor={"#00E0D340"} />
+            <Container fluid className="mx-1640 mx-auto px-0">
+                <Row className="align-items-center">
+                    <Col md={6} className="position-relative text-center text-md-start mb-5 mb-md-0">
                         <h2 className={"head-1 text-blue mx-750 text-center text-md-start"}>
                             Want to take a customised counselling before enrolling?
                         </h2>
-                        <button className={"btn btn-blue"}>Book Now</button>
+                        <button className={`btn btn-blue ${styles.button}`}>Book Now</button>
                         <DotBox rows={5} columns={10} defaultColor="#AABDE1" position={dotPosition} />
                     </Col>
 

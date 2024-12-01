@@ -82,15 +82,14 @@ const DreamsComponent = () => {
               className={`${styles.statCard} stat-card`}
             >
               <div className={styles.card}>
-                <Image
-                  src={stat.image}
-                  alt={stat.description}
-                  width={300}
-                  height={200}
-                  className={styles.image}
-                />
-                <h3 className={styles.value}>{stat.value}</h3>
-                <p className={styles.description}>{stat.description}</p>
+                <div className={styles.image}>
+                  <Image
+                    src={stat.image}
+                    alt={stat.description}
+                  />
+                </div>
+                <h3 className={"head-1 text-center text-blue mt-3 mb-2"}>{stat.value}</h3>
+                <p className={"para-1 text-blue"}>{stat.description}</p>
               </div>
             </Col>
           ))}

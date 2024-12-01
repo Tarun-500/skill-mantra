@@ -4,6 +4,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import styles from './components.module.css';
 import { Container } from 'react-bootstrap';
+import RingComponent from './ui_components/ringBox';
 
 const testimonials = [
   { name: "Amit Kumar", review: "Company is fully committed to enhancing skills of youth of India...", stars: 5 },
@@ -52,8 +53,16 @@ const TestimonialComponent = () => {
     ],
   };
 
+  const position = {
+    top: "50%",
+    right: "0%",
+    transform: "translate(50%, -50%)",
+    position: "absolute",
+  }
+
   return (
     <section className='section-padding bg-blue'>
+      <RingComponent position={position} innerRingColor={'#00E0D340'} outerRingColor={'#00E0D340'} />
       <Container fluid className={`mx-1640 mx-auto ${styles.testimonialSection}`}>
         <h2 className="head-1 text-center text-white">Testimonials</h2>
         <Slider {...settings} className={styles.slider}>

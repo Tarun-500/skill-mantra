@@ -14,6 +14,7 @@ import CCAImg6 from "../../../public/images/cca-6.png"
 import CCAImg7 from "../../../public/images/cca-7.png"
 import CCAImg8 from "../../../public/images/cca-8.png"
 import Image from "next/image";
+import RingComponent from "./ui_components/ringBox";
 
 
 const CCAFeatures = () => {
@@ -32,8 +33,8 @@ const CCAFeatures = () => {
                 duration: .3,
                 scrollTrigger: {
                     trigger: containerRef.current,
-                    start: "top 20%",
-                    end: "bottom 30%",
+                    start: "top 70%",
+                    end: "bottom 20%",
                     scrub: true,
                 },
             }
@@ -49,8 +50,8 @@ const CCAFeatures = () => {
                 duration: .3,
                 scrollTrigger: {
                     trigger: containerRef.current,
-                    start: "top 20%",
-                    end: "bottom 30%",
+                    start: "top 70%",
+                    end: "bottom 20%",
                     scrub: true,
                 },
             }
@@ -66,9 +67,16 @@ const CCAFeatures = () => {
         { icon: CCAImg7, text: "Professional Community" },
         { icon: CCAImg8, text: "Tailored to Your Level" },
     ];
-    const bgColors = ["bg-yellow", "bg-purple", "bg-green"];
+    const position = {
+        top: "50%",
+        right: "0%",
+        transform: "translate(50%, -50%)",
+        position: "absolute",
+        zIndex: -1
+    }
     return (
-        <section className={`section-padding ${styles.ccaFeatures_container}`}>
+        <section className={`section-padding bg-purple-light ${styles.ccaFeatures_container}`}>
+            <RingComponent position={position} innerRingColor={'#00E0D340'} outerRingColor={'#00E0D340'} />
             <h2 className={"head-1 text-blue text-center"}>Why Certified Corporate Accountant (CCA)?</h2>
             <Container fluid ref={containerRef}>
                 <Row className="mx-1640 mx-auto">

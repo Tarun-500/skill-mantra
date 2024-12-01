@@ -35,8 +35,8 @@ const logos = [
 
 const dotPosition = {
     top: "150px",
-    right: "20%",
-    transform: "translateX(-50%)",
+    right: "0%",
+    transform: "translateX(-30px)",
     position: "absolute",
 };
 
@@ -45,7 +45,7 @@ const ToolsPlatform = ({ headingText = "Our Tools Platform" }) => {
         <section className={`section-padding ${styles.toolsPlatform} bg-purple`}>
             <Container fluid>
                 <h2 className="head-1 text-blue text-center">{headingText}</h2>
-                <div className={`mx-1640 mx-auto ${styles.brandLogos}`}>
+                <div className={`mx-1640 mx-auto z-index-1 position-relative ${styles.brandLogos}`}>
                     {logos.map((logo, index) => (
                         <div
                             key={index}

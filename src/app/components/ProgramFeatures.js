@@ -14,6 +14,7 @@ import Img4 from "../../../public/images/cca-4.png"
 import Img5 from "../../../public/images/cca-5.png"
 import Img6 from "../../../public/images/cca-6.png"
 import Img7 from "../../../public/images/cca-7.png"
+import DotBox from "./ui_components/dotBox";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,6 +23,41 @@ const ProgramFeatures = () => {
     const scrollSectionRef = useRef(null);
 
     const features = [
+        {
+            icon: Img1,
+            title: "Overall Approach",
+            description: "Prepare to make your mark in accounting with a course designed to equip you for success.",
+        },
+        {
+            icon: Img2,
+            title: "Program Structure",
+            description: "A 30+ hour journey of focused learning through theory and practice.",
+        },
+        {
+            icon: Img3,
+            title: "Hands-On Practice",
+            description: "Candidates are directly involved in their learning with practical experience.",
+        },
+        {
+            icon: Img4,
+            title: "Assessment & Career Edge",
+            description: "Culminating in a final exam opens doors for a successful corporate career.",
+        },
+        {
+            icon: Img5,
+            title: "Tailored Learning",
+            description: "Experience personalized coursework fit for your career goals.",
+        },
+        {
+            icon: Img6,
+            title: "Integrated Curriculum",
+            description: "Blends theory with practical skills for real-world use.",
+        },
+        {
+            icon: Img7,
+            title: "Overall Approach",
+            description: "Prepare to make your mark in accounting with a course designed to equip you for success.",
+        },
         {
             icon: Img1,
             title: "Overall Approach",
@@ -81,7 +117,7 @@ const ProgramFeatures = () => {
             ease: "none",
             scrollTrigger: {
                 trigger: container,
-                start: "top 30%",
+                start: "top 20%",
                 end: () => `+=${totalScrollDistance}`,
                 scrub: 1,
                 pin: true,
@@ -96,9 +132,18 @@ const ProgramFeatures = () => {
 
     const bgColors = ["bg-yellow", "bg-purple", "bg-green"];
 
+    const position = {
+        top: "100%",
+        left: "0%",
+        transform: "translate(25%, -75%)",
+        position: "absolute",
+        zIndex: 9,
+    }
+
     return (
-        <section className={`mx-1680 mx-auto overflow-hidden section-padding ${styles.programFeatures_container}`} ref={containerRef}>
-            <Container fluid>
+        <section className={` section-padding bg-purple-light `} ref={containerRef}>
+            <DotBox defaultColor={"#00E0D3"} position={position} rows={5} columns={10} />
+            <Container fluid className={`mx-1680 mx-auto overflow-hidden ${styles.programFeatures_container}`}>
                 <div className={`${styles.horizontalScrollSection}`} ref={scrollSectionRef}>
                     <Row className={styles.featureRow}>
                         {features.map((feature, index) => (

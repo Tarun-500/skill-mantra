@@ -24,7 +24,7 @@ const TriangleBox = ({ numberOfTriangles = 7, colors = "#000", position = {}, di
             style={{
                 position: "absolute",
                 ...position,
-                flexdirection: direction,
+                flexDirection: direction,
             }}
         >
             {Array(numberOfTriangles)

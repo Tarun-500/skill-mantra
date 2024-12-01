@@ -21,11 +21,10 @@ const JobAssistance = () => {
     <section className='bg-yellow section-padding'>
       <DotBox defaultColor="#fff" position={position} />
 
-      <Container fluid className={`py-5 ${styles.JobAssistance_container}`}>
-        <Row className="justify-content-center mx-auto mx-1640">
-          <Col md={6}>
+      <Container fluid className={`mx-auto mx-1640 ${styles.JobAssistance_container}`}>
+        <Row className="justify-content-center">
+          <Col md={6} className='px-0 px-sm-3 mb-4 mb-md-0'>
             <Card className={`text-center h-100 ${styles.card}`}>
-              <CardBody>
                 <CardTitle className={styles.title}>
                   Placement Assistance & Process
                 </CardTitle>
@@ -41,10 +40,9 @@ const JobAssistance = () => {
                   <li>Personalized guidance to help you secure your ideal job.</li>
                   <li>Dedicated support throughout your job search journey.</li>
                 </ul>
-              </CardBody>
             </Card>
           </Col>
-          <Col md={6}>
+          <Col md={6} className='px-0 px-sm-3'>
             <Card className={`text-center h-100 ${styles.card}`}>
               <CardBody>
                 <CardTitle className={styles.title}>

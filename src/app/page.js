@@ -12,8 +12,7 @@ import TrustedCompanies from "./components/TrustedCompanies";
 import ProgramPartners from "./components/ProgramPartner";
 import CCAFeatures from "./components/CCAFeatures";
 import ProgramFeatures from "./components/ProgramFeatures";
-import DreamsComponent from "./components/Dream";
-import StepTimeline from "./components/StepTimeline";
+import DreamsComponent from "./components/Dream"; 
 import AssetSlider from "./components/AssetSlider";
 import CourseComponent from "./components/CourseComponent";
 import CounselingComponent from "./components/CounselingComponent";
@@ -40,8 +39,7 @@ export default function Home() {
 
       <ProgramFeatures />
       <JobAssistance />
-      <FinancePartner />
-      <StepTimeline />
+      <FinancePartner /> 
       <ToolsPlatform />
       <WhoCanJoin />
       <WhoWeAre />
