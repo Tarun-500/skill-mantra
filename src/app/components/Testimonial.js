@@ -16,22 +16,35 @@ const testimonials = [
 
 const TestimonialComponent = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
+    arrows: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 1024, // Tablet
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 600, // Mobile
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
         },
@@ -45,13 +58,11 @@ const TestimonialComponent = () => {
         <h2 className="head-1 text-center text-white">Testimonials</h2>
         <Slider {...settings} className={styles.slider}>
           {testimonials.map((testimonial, index) => (
-            <div key={index} className={`card ${styles.testimonialCard}`}>
+            <div key={index} className={`card text-center ${styles.testimonialCard}`}>
               <div className="card-body">
-                <div className="text-center">
-                  {"★".repeat(testimonial.stars).padEnd(5, "☆")}
-                </div>
-                <p className={`mt-3 ${styles.reviewText}`}>{testimonial.review}</p>
-                <h5 className="text-center mt-3">{testimonial.name}</h5>
+                <h5> {"★".repeat(testimonial.stars).padEnd(5, "☆")}</h5>
+                <p className={` ${styles.reviewText}`}>{testimonial.review}</p>
+                <button className="btn btn-blue">{testimonial.name}</button>
               </div>
             </div>
           ))}

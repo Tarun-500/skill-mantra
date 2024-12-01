@@ -40,14 +40,12 @@ body {
 
 section {
   position: relative;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
-
 
 .mx-695{
   max-width: 695px;
 }
-
 
 .mx-750{
   max-width: 750px;

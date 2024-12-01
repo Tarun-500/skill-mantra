@@ -18,11 +18,14 @@ const TargetSegmentCarousel = () => {
   ];
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
+    arrows: false,
     speed: 500,
-    slidesToShow: 3, 
+    slidesToShow: 4, 
     slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 768,
@@ -40,18 +43,22 @@ const TargetSegmentCarousel = () => {
   };
 
   return (
-    <section className="section-padding">
-    <div className={styles.target_segment_container}>
-      <h2 className={"head-1 text-blue text-center"}>Target Segment Definition</h2>
-      <Slider {...settings}>
+    <section className="section-padding bg-blue">
+    <div className={`mx-1640 mx-auto ${styles.target_segment_container}`}>
+      <h2 className={"head-1 text-white text-center"}>Target Segment Definition</h2>
+       <div className={styles.sliderContainer}>
+        {/* <Slider {...settings}> */}
         {segments.map((segment) => (
             <div key={segment.id} className={styles.card}>
+            <div className={styles.imgBox}>
             <Image src={segment.image} alt={segment.title} className={styles.image} />
+            </div>
             <h3 className={styles.segmentTitle}>{segment.title}</h3>
             <button className={styles.readMoreButton}>Read More</button>
           </div>
         ))}
-      </Slider>
+      {/* </Slider> */}
+       </div>
     </div>
         </section>
   );

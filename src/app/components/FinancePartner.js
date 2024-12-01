@@ -6,6 +6,8 @@ import styles from "./FinancePartner.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import ShopSeLogo from "../../../public/images/shop-se.png";
 
+
+
 const FinancePartner = () => {
   return (
     <section className="bg-green section-padding">
