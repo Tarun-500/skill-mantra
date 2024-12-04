@@ -69,7 +69,7 @@ const TestimonialComponent = () => {
           {testimonials.map((testimonial, index) => (
             <div key={index} className={`card text-center ${styles.testimonialCard}`}>
               <div className="card-body">
-                <h5> {"★".repeat(testimonial.stars).padEnd(5, "☆")}</h5>
+                <h5 className={styles.head}> {"★".repeat(testimonial.stars).padEnd(5, "☆")}</h5>
                 <p className={` ${styles.reviewText}`}>{testimonial.review}</p>
                 <button className="btn btn-blue">{testimonial.name}</button>
               </div>

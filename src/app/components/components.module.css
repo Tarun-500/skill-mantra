@@ -328,7 +328,7 @@
     height: 80px;
   }
 
-   h5 {
+  & .head {
     color: var(--yellow);
   }
 
