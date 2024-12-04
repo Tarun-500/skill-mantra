@@ -91,7 +91,7 @@ const ToolsPlatform = ({ headingText = "Our Tools Platform" }) => {
                         </div>
                     ))}
                 </div>
-                <DotBox defaultColor={"red"} position={dotPosition} />
+                <DotBox defaultColor={"#21355C"} position={dotPosition} />
             </Container>
         </section>
     );

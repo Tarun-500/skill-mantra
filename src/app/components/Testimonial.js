@@ -71,7 +71,7 @@ const TestimonialComponent = () => {
               <div className="card-body">
                 <h5 className={styles.head}> {"★".repeat(testimonial.stars).padEnd(5, "☆")}</h5>
                 <p className={` ${styles.reviewText}`}>{testimonial.review}</p>
-                <button className="btn btn-blue">{testimonial.name}</button>
+                <button className={`btn btn-blue ${styles.testiBtn}`}>{testimonial.name}</button>
               </div>
             </div>
           ))}

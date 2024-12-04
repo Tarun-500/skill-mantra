@@ -20,7 +20,7 @@ const WhoCanJoin = () => {
         top: "50%",
         left: "0px",
         "transform": "translate(-50%, -50%)",
-        "zIndex":"-1",
+        "zIndex": "-1",
         position: "absolute"
     }
     return (
@@ -37,10 +37,10 @@ const WhoCanJoin = () => {
                 </div>
 
                 <Row className={`align-items-center ${styles.certificateRow}`}>
-                    <Col md={6}>
+                    <Col md={6} className="px-0">
                         <h2 className={"head-1 mx-695 text-blue text-center text-md-start mb-0"}>Get Industry Recognised Certification</h2>
                     </Col>
-                    <Col md={6}>
+                    <Col md={6} className="px-0">
                         <Image
                             src={certificateImage}
                             alt="Certificate of Achievement"
